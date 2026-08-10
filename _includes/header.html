@@ -1,12 +1,17 @@
 <a class="skip-link" href="#main-content">Skip to content</a>
-<header class="site-header">
-  <div class="header-inner">
-    <a class="site-name" href="{{ '/' | relative_url }}">Tingran Wang</a>
-    <nav class="site-nav" aria-label="Main navigation">
-      <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>About</a>
-      <a href="{{ '/research/' | relative_url }}"{% if page.url == '/research/' %} aria-current="page"{% endif %}>Research</a>
-      <a href="{{ '/publications/' | relative_url }}"{% if page.url == '/publications/' %} aria-current="page"{% endif %}>Publications</a>
-      <a href="{{ '/blog/' | relative_url }}"{% if page.url contains '/blog/' %} aria-current="page"{% endif %}>Blog</a>
-    </nav>
+<header id="header">
+  <div class="top-banner">
+    <h1>{% if page.url == '/' %}Tingran Wang's Research Page{% else %}{{ page.title }}{% endif %}</h1>
+    <br>
+    <hr>
   </div>
 </header>
+
+<nav class="navigation" aria-label="Main navigation">
+  <ul>
+    <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a></li>
+    <li><a href="{{ '/research/' | relative_url }}"{% if page.url == '/research/' %} aria-current="page"{% endif %}>Research</a></li>
+    <li><a href="{{ '/publications/' | relative_url }}"{% if page.url == '/publications/' %} aria-current="page"{% endif %}>Publications</a></li>
+    <li><a href="{{ '/blog/' | relative_url }}"{% if page.url contains '/blog/' %} aria-current="page"{% endif %}>Blog</a></li>
+  </ul>
+</nav>

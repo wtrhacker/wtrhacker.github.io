@@ -4,6 +4,6 @@ description: Publications by Tingran Wang.
 permalink: /publications/
 ---
 
-# Publications
-
-No publications listed yet.
+<div class="intro">
+  <p>No publications listed yet.</p>
+</div>
