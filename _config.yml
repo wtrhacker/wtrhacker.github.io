@@ -1,0 +1,25 @@
+title: Tingran Wang
+description: Physics, genomes, and notes from research.
+url: "https://wtrfermi2.github.io"
+baseurl: "/trwang.github.io"
+lang: en
+timezone: America/New_York
+
+permalink: /blog/:title/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
