@@ -11,7 +11,7 @@ permalink: /
       <br>
       <p>I focus on the three-dimensional folding of chromatin at small and large scales, and its relationship to gene regulation and cellular identity.</p>
       <br>
-      <p><a href="mailto:trwang@mit.edu">email</a> / <a href="https://mirnylab.mit.edu/">Mirny Lab</a> / <a href="https://github.com/wtrfermi2">github</a></p>
+      <p><a href="mailto:trwang@mit.edu">email</a> / <a href="https://mirnylab.mit.edu/">Mirny Lab</a> / <a href="https://github.com/wtrhacker">github</a></p>
       <br>
     </div>
     <div class="intro-image">
