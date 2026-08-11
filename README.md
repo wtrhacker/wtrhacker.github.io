@@ -1,4 +1,4 @@
-# Chromatin Notes
+# What mad pursuit
 
 Minimal blog built with Jekyll and hosted on GitHub Pages.
 

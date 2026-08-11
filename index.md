@@ -1,5 +1,5 @@
 ---
-title: Chromatin Notes
+title: What mad pursuit
 description: Notes from a chromatin scientist at MIT.
 permalink: /
 ---
