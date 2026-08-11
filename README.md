@@ -1,11 +1,11 @@
-# Tingran Wang
+# Chromatin Notes
 
-Personal site and blog, built with Jekyll and hosted on GitHub Pages.
+Minimal blog built with Jekyll and hosted on GitHub Pages.
 
 ## Edit a page
 
-The main pages are `index.md`, `research.md`, `publications.md`, and `blog.md`.
-Edit the Markdown or HTML in one of those files and push the change to `main`.
+The homepage and post index are in `index.md`. Edit it and push the change to
+`main`.
 
 ## Publish a post
 

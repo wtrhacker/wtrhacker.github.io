@@ -187,30 +187,6 @@ ol li {
   font-size: 21px;
 }
 
-.intro-content {
-  display: flex;
-  align-items: flex-start;
-  gap: 18px;
-}
-
-.intro-text {
-  flex: 0 0 60%;
-  margin-left: 40px;
-}
-
-.intro-image {
-  flex: 0 0 40%;
-  text-align: center;
-}
-
-.headshot {
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  max-height: 150px;
-  border-radius: 8px;
-}
-
 .links {
   margin: 0 90px;
   padding: 0 20px;
@@ -297,25 +273,6 @@ ol li {
     margin: 0;
     padding: 5px 8px 40px;
     font-size: 18px;
-  }
-
-  .intro-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-  }
-
-  .intro-text {
-    flex: 1 1 auto;
-    margin-left: 0;
-  }
-
-  .intro-image {
-    flex: 1 1 auto;
-  }
-
-  .headshot {
-    max-height: 180px;
   }
 
   .links {

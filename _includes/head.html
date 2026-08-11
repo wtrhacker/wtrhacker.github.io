@@ -11,7 +11,6 @@
 
 {% assign page_description = page.description | default: site.description %}
 <meta name="description" content="{{ page_description | strip_html | normalize_whitespace | escape }}">
-<meta name="author" content="Tingran Wang">
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
