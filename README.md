@@ -22,6 +22,10 @@ Start it with:
 title: "Post title"
 description: "One sentence shown on the blog page."
 date: YYYY-MM-DD
+# Optional cover image shown on the homepage and post:
+# image: /assets/images/post-name.jpg
+# image_alt: "Short description of the image"
+# image_caption: "Optional photo credit or caption"
 ---
 ```
 

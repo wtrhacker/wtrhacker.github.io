@@ -2,21 +2,26 @@
 layout: default
 ---
 <article class="post">
-  {% if page.subtitle %}<p class="post-subtitle">{{ page.subtitle }}</p>{% endif %}
-  <p class="post-meta">
-    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
-    <span aria-hidden="true"> / </span>
-    {% assign words = content | number_of_words %}
-    {% assign minutes = words | divided_by: 220 | plus: 1 %}
-    <span>{{ minutes }} min read</span>
-  </p>
-  <br>
-  <hr>
-  <br>
+  <header class="post-header">
+    <p class="section-label">Essay</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="post-subtitle">{{ page.subtitle }}</p>{% endif %}
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      <span aria-hidden="true"> / </span>
+      {% assign words = content | number_of_words %}
+      {% assign minutes = words | divided_by: 220 | plus: 1 %}
+      <span>{{ minutes }} min read</span>
+    </p>
+    {% if page.image %}
+      <figure class="post-hero">
+        <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: '' }}">
+        {% if page.image_caption %}<figcaption>{{ page.image_caption }}</figcaption>{% endif %}
+      </figure>
+    {% endif %}
+  </header>
   <div class="post-content">
     {{ content }}
   </div>
-  <br>
-  <hr>
   <p class="back-link"><a href="{{ '/' | relative_url }}">Back to writing</a></p>
 </article>

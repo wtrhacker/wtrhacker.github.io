@@ -1,15 +1,14 @@
 <a class="skip-link" href="#main-content">Skip to content</a>
 <header id="header">
-  <div class="top-banner">
-    <h1>{% if page.url == '/' %}{{ site.title }}{% else %}{{ page.title }}{% endif %}</h1>
-    <br>
-    <hr>
+  <div class="masthead">
+    {% if page.url == '/' %}
+      <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+    {% else %}
+      <p class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></p>
+    {% endif %}
+    <nav class="navigation" aria-label="Main navigation">
+      <a href="mailto:trwang@mit.edu">Contact</a>
+    </nav>
   </div>
+  <p class="site-description">Notes on chromatin, physics, and biology.</p>
 </header>
-
-<nav class="navigation" aria-label="Main navigation">
-  <ul>
-    <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a></li>
-    <li><a href="mailto:trwang@mit.edu">Contact</a></li>
-  </ul>
-</nav>

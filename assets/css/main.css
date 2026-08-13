@@ -1,8 +1,11 @@
 :root {
-  --text: #333333;
-  --link: #1a5f87;
-  --link-hover: #7700b3;
-  --rule: #adb1b2;
+  --paper: #ffffff;
+  --text: #202421;
+  --muted: #69716c;
+  --rule: #d8dcd9;
+  --accent: #963f2c;
+  --accent-dark: #67281b;
+  --wash: #f4f6f3;
 }
 
 html,
@@ -15,6 +18,8 @@ h3,
 p,
 a,
 img,
+figure,
+figcaption,
 strong,
 ul,
 ol,
@@ -39,28 +44,28 @@ hr {
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background: #ffffff;
+  background: var(--paper);
   color: var(--text);
   font-family: Baskerville, Georgia, serif;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 19px;
+  line-height: 1.58;
 }
 
 a {
-  color: var(--link);
+  color: var(--accent);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--link-hover);
+  color: var(--accent-dark);
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
 a:focus-visible {
-  outline: 2px solid var(--link-hover);
-  outline-offset: 3px;
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
 }
 
 h1,
@@ -71,100 +76,69 @@ h3 {
 }
 
 h1 {
-  margin-bottom: 10px;
-  font-size: 39px;
-  line-height: 1.1;
+  font-size: 46px;
+  line-height: 1.08;
 }
 
 h2 {
-  margin-bottom: 15px;
-  font-size: 27px;
-  line-height: 1.1;
-  text-align: center;
+  font-size: 31px;
+  line-height: 1.16;
 }
 
 h3 {
-  margin-bottom: 10px;
-  font-size: 22px;
-  line-height: 1.1;
-}
-
-hr {
-  width: 100%;
-  height: 2px;
-  margin: 5px 0 15px;
-  padding: 0;
-  border-bottom: 1px solid #c1c1cb;
+  font-size: 23px;
+  line-height: 1.25;
 }
 
 ul,
 ol {
-  margin: 0;
-  padding: 0;
+  padding-left: 24px;
 }
 
-ul li,
-ol li {
-  margin: 0 0 10px 18px;
-  font-size: 19px;
-  line-height: 20px;
-}
-
-ul li {
-  list-style-type: disc;
-}
-
-ol li {
-  list-style-type: decimal;
+li {
+  margin-bottom: 10px;
 }
 
 #wrapper {
-  width: 1000px;
+  width: min(920px, calc(100% - 48px));
   margin: 0 auto;
 }
 
 #header {
-  padding: 30px 180px;
+  padding: 42px 0 24px;
+  border-bottom: 1px solid var(--text);
 }
 
-#header .top-banner {
-  min-height: 50px;
-  padding: 10px 10px 5px;
+.masthead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
 }
 
-#header h1 {
-  margin: 5px;
-  padding: 10px;
+.site-title {
+  font-size: 34px;
+  line-height: 1;
+}
+
+.site-title a {
   color: var(--text);
-  font-family: Baskerville, Georgia, serif;
-  font-size: 45px;
-  text-align: center;
+}
+
+.site-title a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.site-description {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 16px;
+  font-style: italic;
 }
 
 .navigation {
-  margin: 0 100px 20px;
-  padding: 15px 5px;
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-  text-align: center;
-}
-
-.navigation ul {
-  margin: 0;
-  padding: 0;
-}
-
-.navigation ul li {
-  display: inline;
-  margin: 0;
-  padding: 0 32px;
-  font-size: 26px;
-  line-height: 1;
-  list-style-type: none;
-}
-
-.navigation a {
-  color: var(--link);
+  font-size: 17px;
 }
 
 .skip-link {
@@ -173,8 +147,8 @@ ol li {
   left: 12px;
   z-index: 10;
   padding: 7px 10px;
-  background: #ffffff;
-  color: var(--link);
+  background: var(--paper);
+  color: var(--accent);
 }
 
 .skip-link:focus {
@@ -182,37 +156,154 @@ ol li {
 }
 
 .intro {
-  margin: 0 60px;
-  padding: 5px 20px;
-  font-size: 21px;
+  max-width: 700px;
+  padding: 54px 0 62px;
+  font-size: 22px;
+  line-height: 1.52;
 }
 
-.links {
-  margin: 0 90px;
-  padding: 0 20px;
-  font-size: 21px;
+.intro p + p {
+  margin-top: 14px;
 }
 
-.date {
-  color: #666666;
+.intro-contact {
   font-size: 17px;
+}
+
+.section-label {
+  color: var(--muted);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.archive {
+  padding-bottom: 80px;
+  border-top: 1px solid var(--text);
+}
+
+.archive > .section-label {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.post-preview {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 36px;
+  padding: 38px 0 42px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.post-preview.has-image {
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 34%);
+}
+
+.post-preview-meta,
+.post-meta {
+  color: var(--muted);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.post-preview h3 {
+  margin-top: 9px;
+  font-size: 31px;
+  line-height: 1.16;
+}
+
+.post-preview h3 a {
+  color: var(--text);
+}
+
+.post-preview h3 a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.post-preview-subtitle {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 18px;
+  font-style: italic;
+}
+
+.post-preview-excerpt {
+  max-width: 650px;
+  margin-top: 16px;
+  color: #3f4641;
+  font-size: 18px;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.post-preview-image {
+  align-self: start;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--wash);
+}
+
+.post-preview-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .post {
-  margin: 0 90px;
-  padding: 5px 20px 60px;
-  font-size: 21px;
+  width: min(720px, 100%);
+  margin: 0 auto;
+  padding: 58px 0 80px;
+  font-size: 20px;
+}
+
+.post-header {
+  margin-bottom: 42px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.post-header h1 {
+  margin-top: 12px;
 }
 
 .post-subtitle {
-  margin-bottom: 8px;
-  text-align: center;
+  margin-top: 14px;
+  color: #4d554f;
+  font-size: 22px;
+  font-style: italic;
 }
 
 .post-meta {
-  color: #555555;
-  font-size: 17px;
-  text-align: center;
+  margin-top: 18px;
+}
+
+.post-hero {
+  margin-top: 30px;
+}
+
+.post-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: cover;
+}
+
+.post-hero figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 14px;
 }
 
 .post-content p {
@@ -220,81 +311,105 @@ ol li {
 }
 
 .post-content h2 {
-  margin: 50px 0 28px;
-  padding-top: 22px;
-  border-top: 1px solid #c1c1cb;
+  margin: 50px 0 24px;
+  padding-top: 28px;
+  border-top: 1px solid var(--rule);
 }
 
-.post-content > p:first-child {
-  font-size: 21px;
+.post-content h3 {
+  margin: 38px 0 18px;
 }
 
 .back-link {
-  margin-top: 18px;
+  margin-top: 54px;
+  padding-top: 22px;
+  border-top: 1px solid var(--text);
+  font-size: 16px;
 }
 
 .error-page {
-  text-align: center;
+  padding: 64px 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   #wrapper {
-    width: auto;
-    max-width: 100%;
-    padding: 0 12px;
+    width: min(100% - 30px, 920px);
   }
 
   #header {
-    padding: 20px 0 10px;
+    padding: 28px 0 18px;
   }
 
-  #header .top-banner {
-    padding: 5px 0;
+  .site-title {
+    font-size: 28px;
   }
 
-  #header h1 {
-    padding: 6px;
-    font-size: 30px;
+  .site-description {
+    font-size: 14px;
+  }
+
+  .intro {
+    padding: 38px 0 44px;
+    font-size: 19px;
+  }
+
+  .post-preview,
+  .post-preview.has-image {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 30px 0 34px;
+  }
+
+  .post-preview-image {
+    grid-row: 1;
+    width: 100%;
+  }
+
+  .post-preview h3 {
+    font-size: 27px;
+  }
+
+  .post-preview-excerpt {
+    font-size: 17px;
+  }
+
+  .post {
+    padding: 42px 0 60px;
+    font-size: 18px;
+  }
+
+  .post-header h1 {
+    font-size: 37px;
+  }
+
+  .post-subtitle {
+    font-size: 19px;
+  }
+
+  .post-content p {
+    margin-bottom: 24px;
+  }
+
+  .post-content h2 {
+    margin-top: 42px;
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 420px) {
+  .masthead {
+    align-items: flex-start;
+  }
+
+  .site-title {
+    font-size: 25px;
   }
 
   .navigation {
-    margin: 0;
-    padding: 10px 5px;
+    font-size: 15px;
   }
 
-  .navigation ul li {
-    display: inline-block;
-    padding: 4px 9px;
-    font-size: 18px;
-  }
-
-  .intro,
-  .post {
-    margin: 0;
-    padding: 5px 8px 40px;
-    font-size: 18px;
-  }
-
-  .links {
-    margin: 0;
-    padding: 5px 8px 40px;
-    font-size: 18px;
-  }
-
-  ul li,
-  ol li {
-    margin: 0 0 10px 18px;
-    font-size: 17px;
-    line-height: 1.4;
-  }
-
-  h2 {
-    font-size: 23px;
-  }
-
-  .post-content p,
-  .post-content > p:first-child {
-    font-size: 18px;
-    line-height: 28px;
+  .post-header h1 {
+    font-size: 32px;
   }
 }
